@@ -65,6 +65,7 @@ Return
 ^!#2::LayoutKanken()
 ^!#3::LayoutTech()
 ^!#4::LayoutDiscreteMath()
+^!#5::LayoutRead()
 ^!#F24::LayoutStenoKeyboard()
 
 LayoutStandard() {
@@ -166,6 +167,25 @@ LayoutDiscreteMath() {
 
   Sleep 10000
   Run "https://blackboard.und.edu/ultra/courses/_124545_1/cl/outline"
+  Return
+}
+
+LayoutRead() {
+  Run "C:\scoop\apps\sioyek\current\sioyek.exe" "C:\~\archives\media\books\_wip\practical-vim.pdf"
+  Run "autohotkey.exe" "C:\~\dev\superhi\LaunchToggle.ahk" "\(Neovim\) ahk_exe neovide.exe" "C:\~\dev\superhi\nvim\nvim.ahk",, Hide
+  Sleep 1000
+  Run "autohotkey.exe" "C:\~\dev\superhi\LaunchToggle.ahk" "\(Dokugaku\) ahk_exe neovide.exe" "C:\~\dev\superhi\nvim\dokugaku.ahk",, Hide
+  Sleep 1000
+
+  WinActivate ahk_exe sioyek.exe
+  Snap("main_center", "left", "full")
+
+  WinActivate \(Neovim\) Neovide
+  Snap("main_center", "right", "full")
+
+  WinActivate \(Dokugaku\) Neovide
+  Snap("main_right", "left", "full")
+
   Return
 }
 
