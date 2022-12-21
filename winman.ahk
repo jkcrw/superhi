@@ -66,6 +66,7 @@ Return
 ^!#3::LayoutTech()
 ^!#4::LayoutDiscreteMath()
 ^!#5::LayoutRead()
+^!#6::LayoutStudy()
 ^!#F24::LayoutStenoKeyboard()
 
 LayoutStandard() {
@@ -185,6 +186,25 @@ LayoutRead() {
 
   WinActivate \(Dokugaku\) Neovide
   Snap("main_right", "left", "full")
+
+  Return
+}
+
+LayoutStudy() {
+  Run "autohotkey.exe" "C:\~\dev\superhi\LaunchToggle.ahk" "ahk_exe msedge.exe" "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Microsoft Edge.lnk",, Hide
+  Sleep 1500
+  Run "autohotkey.exe" "C:\~\dev\superhi\LaunchToggle.ahk" "\(Dokugaku\) ahk_exe neovide.exe" "C:\~\dev\superhi\nvim\dokugaku.ahk",, Hide
+  Sleep 1500
+
+  WinActivate ahk_exe msedge.exe
+  Snap("main_center", "left", "full")
+
+  WinActivate \(Dokugaku\) Neovide
+  Snap("main_center", "right", "full")
+  Sleep 250
+  Send !u
+  Sleep 250
+  Send :e _dsa\complete-dsa-python\README.md{Enter}
 
   Return
 }
