@@ -2,7 +2,7 @@
 pythonbase := ""
 EnvSet, PYTHONUSERBASE, %pythonbase%
 
-SetWorkingDir, C:\~\work\_school\osu\cs208
+SetWorkingDir, C:\~\work\_training\osu\cs208
 
 files = % ""
 . " README.md"

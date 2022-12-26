@@ -2,7 +2,7 @@
 pythonbase := ""
 EnvSet, PYTHONUSERBASE, %pythonbase%
 
-SetWorkingDir, C:\~\.sel2
+SetWorkingDir, C:\~\.sel
 
 files = % ""
 . " README.md"

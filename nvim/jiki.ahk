@@ -2,7 +2,7 @@
 pythonbase := ""
 EnvSet, PYTHONUSERBASE, %pythonbase%
 
-SetWorkingDir, C:\~\archives\jiki
+SetWorkingDir, C:\~\arc\jiki
 
 files = % ""
 . " q.md"
