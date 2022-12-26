@@ -30,8 +30,8 @@ CoordMode, Mouse, Screen
 ;└─────────────────────────────────────────────────────────────────────────────
 ; ~RButton & LButton::MsgBox, hey
 #IfWinNotActive ahk_exe AcroRd32.exe
-  ^WheelUp::Send {PgUp}
-  ^WheelDown::Send {PgDn}
+  !WheelUp::Send {PgUp}
+  !WheelDown::Send {PgDn}
 #IfWinNotActive
 
 ;┌─────────────────────────────────────────────────────────────────────────────

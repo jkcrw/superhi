@@ -13,10 +13,10 @@
     Send ^!+#-
   } else {
     Run wtp,,Hide
-    WinWait ahk_exe WindowsTerminal.exe
-    Sleep 300
-    WinActivate
-    Snap(main_center, "left", "bottom")
+    ; WinWait ahk_exe WindowsTerminal.exe
+    ; Sleep 300
+    ; WinActivate
+    ; Snap(main_center, "left", "bottom")
     ; Sleep 100
     ; Send {F10}
   }
@@ -246,11 +246,11 @@ GetExplorerPath(hwnd=0){
 
 
   ; Debugging
-  ^/::Send ^+e
-  ^,::Send !y
-  ^.::Send !x
-  ^m::Send !n
-  ^F23::Send ^!#{F12}
+  ; $!/::Send ^+e
+  $!,::Send !y
+  $!.::Send !x
+  $!m::Send !n
+  ; !F23::Send ^!#{F12}
 
   ; Version Control
   ^!g::Send ^+g
@@ -266,21 +266,24 @@ GetExplorerPath(hwnd=0){
   ^!o::Send ^+{F2}
   ^!+o::Send ^+{F8}
   ^!r::Send !{F12}
+  !+a::Send ^!{F8}
 
 
   ; git Hunk movement
-  $!WheelDown::
-  $!,::
+  $^WheelDown::
+  $^,::
     Send !,
     Sleep 10
     Send zz
     Return
-  $!WheelUp::
-  $!.::
+  $^WheelUp::
+  $^.::
     Send !.
     Sleep 10
     Send zz
     Return
+  ^m::Send ^+{F4}
+  ^/::Send ^+a
 
   ^!+c::Send !p
 
@@ -338,6 +341,13 @@ GetExplorerPath(hwnd=0){
   ^F17::Send !a
   ^F20::Send !a
 
+  ; Jump back/forward
+  ^o::Send ^!{F11}
+  ^i::Send ^!{F10}
+
+  ; Swap text
+  ^!+#s::Send ^!{F9}
+
 
   ; Focus current file in left sidebar tree
   ^!+f::Send !{F5}
@@ -362,6 +372,8 @@ GetExplorerPath(hwnd=0){
   ^F15::Send ^+{/} ; ^+Comment
   ^!+#n::Send ^!#n ; New view into current buffer
   ^!+#p::Send ^+n^!p ; Open recent workspace
+  ^WheelUp::Send ^.
+  ^WheelDown::Send ^,
   ^!+#r::
     Sleep 10
     Clipboard :=
@@ -433,8 +445,8 @@ GetExplorerPath(hwnd=0){
 ; Terminal
 #IfWinActive ahk_exe WindowsTerminal.exe
   ^!+#u::Send ^u
-  !WheelUp::Send !.
-  !WheelDown::Send !,
+  ^WheelUp::Send ^o
+  ^WheelDown::Send ^i
   ^F12::Return
   MButton::Send ^{LButton}
 #IfWinActive
@@ -446,6 +458,8 @@ GetExplorerPath(hwnd=0){
 
 ; Sioyek
 #IfWinActive ahk_exe sioyek.exe
+  WheelDown::Send {PgDn}
+  WheelUp::Send {PgUp}
   ^F12::Return
 #IfWinActive
 
