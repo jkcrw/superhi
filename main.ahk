@@ -21,6 +21,7 @@ SetWinDelay, 0
 ; │ Load Everything Up
 ; └─────────────────────────────────────────────────────────────────────────────
 #Include unify_IME.ahk
+; #Include hide_cursor.ahk
 #Include winman.ahk
 #Include keyman.ahk
 #Include cagdrag.ahk
