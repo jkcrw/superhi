@@ -22,10 +22,10 @@ SetWinDelay, 0
 ; └─────────────────────────────────────────────────────────────────────────────
 #Include unify_IME.ahk
 ; #Include hide_cursor.ahk
-#Include winman.ahk
-#Include keyman.ahk
+#Include win.ahk
+#Include keys.ahk
 #Include cagdrag.ahk
-#Include mouseman.ahk
+#Include mouse.ahk
 
 ^!+#Space::Reload
 ^!+#PgUp::ExitApp

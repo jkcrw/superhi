@@ -6,8 +6,8 @@ SetWorkingDir, C:\~\dev\superhi
 
 files = % ""
 . " main.ahk"
-. " keyman.ahk"
-. " winman.ahk"
+. " keys.ahk"
+. " win.ahk"
 
 Run neovide.exe %files% --multigrid
 WinWait Neovide
