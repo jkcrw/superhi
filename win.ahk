@@ -118,21 +118,31 @@ LayoutKanken() {
 }
 
 LayoutTech() {
+  Run "autohotkey.exe" "LaunchToggle.ahk" "Jak - Anki ahk_exe anki.exe" "anki.cmd",, Hide
+  Run "autohotkey.exe" "LaunchToggle.ahk" "\(Pazuru\) ahk_exe neovide.exe" "C:\~\dev\superhi\nvim\pazuru.ahk",, Hide
+  Run wtp -w -1 -d "C:\~\dev\pazuru\tools",, Hide
   Run "https://leetcode.com/jxcrw/"
   Run "https://leetcode.com/problemset/all/"
   ; Run "https://www.techinterviewhandbook.org/best-practice-questions"
-  Run "https://gist.github.com/tykurtz/3548a31f673588c05c89f9ca42067bc4"
-  Run "https://monkeytype.com"
+  ; Run "https://gist.github.com/tykurtz/3548a31f673588c05c89f9ca42067bc4"
+  Run "https://www.youtube.com/playlist?list=PLyc1h6zbeN84XQIAxtAVYGKba72o_Y-YQ"
+  Run "https://www.youtube.com/playlist?list=PLeymWH78anxrAsh5NNYuYyB6VxNyOy49l"
   Run "C:\\~\\dev\\sphk\\Utilities\\steno-jig\\form.html"
-  Run "idea64.exe" "C:\~\dev\dokugaku\pazuru\tools\_kb.py"
-  Sleep 1000
+  Run "https://monkeytype.com"
 
+  WinWait ahk_exe vivaldi.exe
   WinActivate ahk_exe vivaldi.exe
   Snap("main_center", "left", "full")
-  WinActivate ahk_exe idea64.exe
+
+  WinWait \(Pazuru\) Neovide
+  WinActivate \(Pazuru\) Neovide
   Snap("main_center", "right", "full")
-  WinActivate \(DV\) - Sublime Text
-  Snap("main_right", "left", "full")
+
+  WinWait ~/../pazuru/tools ahk_exe WindowsTerminal.exe
+  WinActivate ~/../pazuru/tools ahk_exe WindowsTerminal.exe
+  Snap("top_center", "right", "bottom")
+
+  WinWait Jak - Anki
   WinActivate Jak - Anki
   Snap("main_center", "right", "full")
   Return
@@ -172,7 +182,7 @@ LayoutDiscreteMath() {
 }
 
 LayoutRead() {
-  Run "C:\scoop\apps\sioyek\current\sioyek.exe" "C:\~\archives\media\books\_wip\practical-vim.pdf"
+  Run "C:\scoop\apps\sioyek\current\sioyek.exe" "C:\~\arc\media\books\_wip\practical-vim.pdf"
   Run "autohotkey.exe" "C:\~\dev\superhi\LaunchToggle.ahk" "\(Neovim\) ahk_exe neovide.exe" "C:\~\dev\superhi\nvim\nvim.ahk",, Hide
   Sleep 1000
   Run "autohotkey.exe" "C:\~\dev\superhi\LaunchToggle.ahk" "\(Dokugaku\) ahk_exe neovide.exe" "C:\~\dev\superhi\nvim\dokugaku.ahk",, Hide
@@ -211,7 +221,7 @@ LayoutStudy() {
 
 LayoutStenoKeyboard() {
   if !WinExist("Keyboard Layout Editor") {
-    Run "vivaldi.exe"
+    Run "C:\scoop\apps\vivaldi-snapshot\5.6.2829.3\Application\vivaldi.exe"
     Sleep 400
     Run http://www.keyboard-layout-editor.com/#/gists/e15f18924bc8a791d9ab9e7bb8ca9236
     Sleep 400
@@ -283,7 +293,7 @@ Snap(monitor, regionH, regionV) {
 
   ; Per-client adjustments
   WinGetTitle, winTitle, A
-  noAdjustmentClients := ["Sublime Text", "Vivaldi", "VS Code", "diagrams.net"]
+  noAdjustmentClients := ["Sublime Text", "VS Code", "diagrams.net"]
   if Contains(winTitle, noAdjustmentClients) {
     ; Do nothing because no adjustments required
   } else {
