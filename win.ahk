@@ -1,4 +1,4 @@
-﻿; Advanced window management magic.
+; Advanced window management magic.
 ; Created: 2016/06/26
 ; Inspired by Andrew Moore's Advanced Window Snap (https://gist.github.com/AWMooreCO/1ef708055a11862ca9dc)
 
