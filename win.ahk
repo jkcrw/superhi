@@ -64,9 +64,9 @@ Return
 ^!#1::LayoutStenoPractice()
 ^!#2::LayoutKanken()
 ^!#3::LayoutTech()
-^!#4::LayoutDiscreteMath()
+^!#4::LayoutClasses()
 ^!#5::LayoutRead()
-^!#6::LayoutStudy()
+^!#6::LayoutSelfStudy()
 ^!#F24::LayoutStenoKeyboard()
 
 LayoutStandard() {
@@ -148,59 +148,66 @@ LayoutTech() {
   Return
 }
 
-LayoutDiscreteMath() {
+LayoutClasses() {
+  Run "autohotkey.exe" "LaunchToggle.ahk" "Jak - Anki ahk_exe anki.exe" "anki.cmd",, Hide
+  Run "autohotkey.exe" "LaunchToggle.ahk" "\(OSU\) ahk_exe neovide.exe" "C:\~\dev\superhi\nvim\osu.ahk",, Hide
   Run "https://blackboard.und.edu/ultra/courses/_124545_1/cl/outline"
-  Run "C:\~\work\_school\osu\cs208"
-  Run "C:\~\work\_school\osu\cs208\textbook.pdf"
-  Sleep 1000
-  Run "C:\~\work\_school\osu\Exercise Solutions.pdf"
-  Sleep 1000
-  Sleep 5000
+  Run, explore "C:\~\work\_training\osu\cs208"
+  Run "C:\scoop\apps\sioyek\current\sioyek.exe" --new-window "C:\~\work\_training\osu\cs208\discrete-math.pdf"
+  Run "C:\scoop\apps\sioyek\current\sioyek.exe" --new-window "C:\~\work\_training\osu\exercises.pdf"
 
+  WinWait ahk_exe vivaldi.exe
   WinActivate ahk_exe vivaldi.exe
   Snap("main_left", "right", "full")
 
-  WinActivate Discrete Math 3rd Edition
+  WinWait discrete-math.pdf
+  WinActivate discrete-math.pdf
   Snap("main_center", "left", "full")
 
-  WinActivate cs208
-  Snap("top_center", "right", "bottom")
-
+  WinWait \(OSU\) Neovide
   WinActivate \(OSU\) Neovide
   Snap("main_center", "right", "full")
 
-  WinActivate Exercise Solutions
+  WinWait cs208
+  WinActivate cs208
+  Snap("top_center", "right", "bottom")
+
+  WinWait exercises.pdf
+  WinActivate exercises.pdf
   Snap("main_right", "left", "full")
 
+  WinWait Jak - Anki
   WinActivate Jak - Anki
   Snap("main_right", "right", "full")
-  Sleep 1000
 
-  Sleep 10000
+  Sleep 15000
   Run "https://blackboard.und.edu/ultra/courses/_124545_1/cl/outline"
   Return
 }
 
 LayoutRead() {
-  Run "C:\scoop\apps\sioyek\current\sioyek.exe" "C:\~\arc\media\books\_wip\practical-vim.pdf"
   Run "autohotkey.exe" "C:\~\dev\superhi\LaunchToggle.ahk" "\(Neovim\) ahk_exe neovide.exe" "C:\~\dev\superhi\nvim\nvim.ahk",, Hide
-  Sleep 1000
+  Sleep 250
   Run "autohotkey.exe" "C:\~\dev\superhi\LaunchToggle.ahk" "\(Dokugaku\) ahk_exe neovide.exe" "C:\~\dev\superhi\nvim\dokugaku.ahk",, Hide
-  Sleep 1000
+  Sleep 250
+  Run "C:\scoop\apps\sioyek\current\sioyek.exe" "C:\~\arc\media\books\_wip\practical-vim.pdf"
 
-  WinActivate ahk_exe sioyek.exe
+  WinWait practical-vim.pdf
+  WinActivate practical-vim.pdf
   Snap("main_center", "left", "full")
 
+  WinWait \(Neovim\) Neovide
   WinActivate \(Neovim\) Neovide
   Snap("main_center", "right", "full")
 
+  WinWait \(Dokugaku\) Neovide
   WinActivate \(Dokugaku\) Neovide
   Snap("main_right", "left", "full")
 
   Return
 }
 
-LayoutStudy() {
+LayoutSelfStudy() {
   Run "autohotkey.exe" "C:\~\dev\superhi\LaunchToggle.ahk" "ahk_exe msedge.exe" "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Microsoft Edge.lnk",, Hide
   Sleep 1500
   Run "autohotkey.exe" "C:\~\dev\superhi\LaunchToggle.ahk" "\(Dokugaku\) ahk_exe neovide.exe" "C:\~\dev\superhi\nvim\dokugaku.ahk",, Hide
