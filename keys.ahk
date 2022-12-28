@@ -348,6 +348,14 @@ GetExplorerPath(hwnd=0){
   ; Swap text
   ^!+#s::Send ^!{F9}
 
+  ; Confirm
+  ^Enter::
+    Sleep 10
+    Send ^s
+    Sleep 10
+    Send ^{F4}
+    Return
+
 
   ; Focus current file in left sidebar tree
   ^!+f::Send !{F5}
@@ -449,6 +457,7 @@ GetExplorerPath(hwnd=0){
   ^WheelDown::Send ^i
   ^F12::Return
   MButton::Send ^{LButton}
+  ^Enter::Send !k
 #IfWinActive
 
 ; Word
