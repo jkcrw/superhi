@@ -23,7 +23,7 @@
 Return
 
 F13::Run "launchtoggle_plover.ahk"
-; ^!+#F10::Send ^!+p ; Summon KeePass
+^!+#F15::Send ^!+p ; Summon KeePass
 ; ^!#e::Run "start_sublime.ahk"
 ^PrintScreen::Send #+s ; Take screenshot of selected region
 ^!+#Launch_App2::Run "https://calendar.google.com"
