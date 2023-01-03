@@ -2,12 +2,12 @@
 pythonbase := ""
 EnvSet, PYTHONUSERBASE, %pythonbase%
 
-SetWorkingDir, C:\~\arc\jiki
+SetWorkingDir, C:\~\arc\kiki
 
 files = % ""
 . " q.md"
-. " _journals\life.md"
-. " _journals\lw.md"
+. " _journal\life.md"
+. " _journal\lw.md"
 . " software\swj.md"
 . " software\osu.md"
 . " software\tools.md"
@@ -15,6 +15,6 @@ files = % ""
 
 Run neovide.exe %files%  --multigrid
 WinWait Neovide
-WinSetTitle, Neovide, , (Jiki) Neovide
+WinSetTitle, Neovide, , (Kiki) Neovide
 
 ExitApp

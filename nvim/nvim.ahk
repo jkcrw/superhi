@@ -2,7 +2,7 @@
 pythonbase := ""
 EnvSet, PYTHONUSERBASE, %pythonbase%
 
-SetWorkingDir, C:\~\.sel\nvim
+SetWorkingDir, C:\~\.zia\nvim
 
 files = % ""
 . " init.lua"

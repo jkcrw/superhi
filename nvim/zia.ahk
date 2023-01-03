@@ -2,7 +2,7 @@
 pythonbase := ""
 EnvSet, PYTHONUSERBASE, %pythonbase%
 
-SetWorkingDir, C:\~\.sel
+SetWorkingDir, C:\~\.zia
 
 files = % ""
 . " README.md"
@@ -17,6 +17,6 @@ files = % ""
 
 Run neovide.exe %files% --multigrid
 WinWait Neovide
-WinSetTitle, Neovide, , (SEL) Neovide
+WinSetTitle, Neovide, , (Zia) Neovide
 
 ExitApp

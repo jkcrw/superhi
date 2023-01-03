@@ -8,7 +8,7 @@
 ; Monitor Assignments
 GetMonitorNum(name) {
   switch A_ComputerName {
-    case "SEL":
+    case "zia":
       monitors := {"top_center": 2, "main_left": 4, "main_center": 1, "main_right": 3}
     case "X1":
       monitors := {"main_left": 2, "main_center": 1, "main_right": 3}
@@ -153,8 +153,8 @@ LayoutClasses() {
   Run "autohotkey.exe" "LaunchToggle.ahk" "\(OSU\) ahk_exe neovide.exe" "C:\~\dev\superhi\nvim\osu.ahk",, Hide
   Run "https://blackboard.und.edu/ultra/courses/_124545_1/cl/outline"
   Run, explore "C:\~\work\_training\osu\cs208"
-  Run "C:\scoop\apps\sioyek\current\sioyek.exe" --new-window "C:\~\work\_training\osu\cs208\discrete-math.pdf"
-  Run "C:\scoop\apps\sioyek\current\sioyek.exe" --new-window "C:\~\work\_training\osu\exercises.pdf"
+  Run "C:\scoop\apps\sioyek\current\sioyek.exe" --new-window "C:\~\arc\cdx\books\_wip\discrete-math3_und.pdf"
+  Run "C:\scoop\apps\sioyek\current\sioyek.exe" --new-window "C:\~\arc\cdx\books\_wip\discrete-math3_und-x.pdf"
 
   WinWait ahk_exe vivaldi.exe
   WinActivate ahk_exe vivaldi.exe
@@ -188,20 +188,20 @@ LayoutClasses() {
 LayoutRead() {
   Run "autohotkey.exe" "C:\~\dev\superhi\LaunchToggle.ahk" "\(Neovim\) ahk_exe neovide.exe" "C:\~\dev\superhi\nvim\nvim.ahk",, Hide
   Sleep 250
-  Run "autohotkey.exe" "C:\~\dev\superhi\LaunchToggle.ahk" "\(Dokugaku\) ahk_exe neovide.exe" "C:\~\dev\superhi\nvim\dokugaku.ahk",, Hide
+  Run "autohotkey.exe" "C:\~\dev\superhi\LaunchToggle.ahk" "\(Zaia\) ahk_exe neovide.exe" "C:\~\dev\superhi\nvim\zaia.ahk",, Hide
   Sleep 250
-  Run "C:\scoop\apps\sioyek\current\sioyek.exe" "C:\~\arc\media\books\_wip\practical-vim.pdf"
+  Run "C:\scoop\apps\sioyek\current\sioyek.exe" "C:\~\arc\cdx\books\_wip\practical-vim.pdf"
 
   WinWait practical-vim.pdf
   WinActivate practical-vim.pdf
-  Snap("main_center", "left", "full")
+  Snap("main_cener", "left", "full")
 
   WinWait \(Neovim\) Neovide
   WinActivate \(Neovim\) Neovide
   Snap("main_center", "right", "full")
 
-  WinWait \(Dokugaku\) Neovide
-  WinActivate \(Dokugaku\) Neovide
+  WinWait \(Zaia\) Neovide
+  WinActivate \(Zaia\) Neovide
   Snap("main_right", "left", "full")
 
   Return
@@ -210,13 +210,13 @@ LayoutRead() {
 LayoutSelfStudy() {
   Run "autohotkey.exe" "C:\~\dev\superhi\LaunchToggle.ahk" "ahk_exe msedge.exe" "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Microsoft Edge.lnk",, Hide
   Sleep 1500
-  Run "autohotkey.exe" "C:\~\dev\superhi\LaunchToggle.ahk" "\(Dokugaku\) ahk_exe neovide.exe" "C:\~\dev\superhi\nvim\dokugaku.ahk",, Hide
+  Run "autohotkey.exe" "C:\~\dev\superhi\LaunchToggle.ahk" "\(Zaia\) ahk_exe neovide.exe" "C:\~\dev\superhi\nvim\zaia.ahk",, Hide
   Sleep 1500
 
   WinActivate ahk_exe msedge.exe
   Snap("main_center", "left", "full")
 
-  WinActivate \(Dokugaku\) Neovide
+  WinActivate \(Zaia\) Neovide
   Snap("main_center", "right", "full")
   Sleep 250
   Send !u

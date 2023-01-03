@@ -2,13 +2,13 @@
 pythonbase := ""
 EnvSet, PYTHONUSERBASE, %pythonbase%
 
-SetWorkingDir, C:\~\dev\dokugaku
+SetWorkingDir, C:\~\arc\nota
 
 files = % ""
 . " README.md"
 
 Run neovide.exe %files% --multigrid
 WinWait Neovide
-WinSetTitle, Neovide, , (Dokugaku) Neovide
+WinSetTitle, Neovide, , (Nota) Neovide
 
 ExitApp
