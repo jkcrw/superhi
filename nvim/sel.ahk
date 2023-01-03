@@ -6,6 +6,7 @@ SetWorkingDir, C:\~\.sel
 
 files = % ""
 . " README.md"
+. " fish\config.fish"
 . " zsh\.zshrc"
 . " zsh\do.zsh"
 . " zsh\keys.zsh"
