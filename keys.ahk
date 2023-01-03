@@ -137,7 +137,7 @@ Return
     ClipWait, 0.1
     if (Clipboard) {
       Clipboard := Clipboard
-      Run wt -d "%Clipboard%"
+      Run wtp -d "%Clipboard%"
     } else {
       ; Send ^l^a^c
       ; ClipWait, 0.1
@@ -457,7 +457,7 @@ GetExplorerPath(hwnd=0){
   ^WheelDown::Send ^i
   ^F12::Return
   MButton::Send ^{LButton}
-  ^Enter::Send !k
+  ^Enter::Send {Right}{Enter}
 #IfWinActive
 
 ; Word
