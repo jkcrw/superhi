@@ -2,13 +2,13 @@
 pythonbase := ""
 EnvSet, PYTHONUSERBASE, %pythonbase%
 
-SetWorkingDir, C:\~\arc\nota
+SetWorkingDir, C:\~\arc\navi
 
 files = % ""
 . " README.md"
 
 Run neovide.exe %files% --multigrid
 WinWait Neovide
-WinSetTitle, Neovide, , (Nota) Neovide
+WinSetTitle, Neovide, , (Navi) Neovide
 
 ExitApp

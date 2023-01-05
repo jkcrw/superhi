@@ -2,7 +2,7 @@
 pythonbase := ""
 EnvSet, PYTHONUSERBASE, %pythonbase%
 
-SetWorkingDir, C:\~\dev\pazuru
+SetWorkingDir, C:\~\dev\enigmata
 
 files = % ""
 . " README.md"
@@ -10,6 +10,6 @@ files = % ""
 
 Run neovide.exe %files% --multigrid
 WinWait Neovide
-WinSetTitle, Neovide, , (Pazuru) Neovide
+WinSetTitle, Neovide, , (Enigmata) Neovide
 
 ExitApp

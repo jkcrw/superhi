@@ -153,15 +153,15 @@ LayoutClasses() {
   Run "autohotkey.exe" "LaunchToggle.ahk" "\(OSU\) ahk_exe neovide.exe" "C:\~\dev\superhi\nvim\osu.ahk",, Hide
   Run "https://blackboard.und.edu/ultra/courses/_124545_1/cl/outline"
   Run, explore "C:\~\work\_training\osu\cs208"
-  Run "C:\scoop\apps\sioyek\current\sioyek.exe" --new-window "C:\~\arc\cdx\books\_wip\discrete-math3_und.pdf"
-  Run "C:\scoop\apps\sioyek\current\sioyek.exe" --new-window "C:\~\arc\cdx\books\_wip\discrete-math3_und-x.pdf"
+  Run "C:\scoop\apps\sioyek\current\sioyek.exe" --new-window "C:\~\arc\cdx\_now\discrete-math-3e_und.pdf"
+  Run "C:\scoop\apps\sioyek\current\sioyek.exe" --new-window "C:\~\arc\cdx\_now\discrete-math-3e-solutions_und.pdf"
 
   WinWait ahk_exe vivaldi.exe
   WinActivate ahk_exe vivaldi.exe
   Snap("main_left", "right", "full")
 
-  WinWait discrete-math.pdf
-  WinActivate discrete-math.pdf
+  WinWait discrete-math3_und.pdf
+  WinActivate discrete-math3_und.pdf
   Snap("main_center", "left", "full")
 
   WinWait \(OSU\) Neovide
@@ -172,8 +172,8 @@ LayoutClasses() {
   WinActivate cs208
   Snap("top_center", "right", "bottom")
 
-  WinWait exercises.pdf
-  WinActivate exercises.pdf
+  WinWait discrete-math3_und-x.pdf
+  WinActivate discrete-math3_und-x.pdf
   Snap("main_right", "left", "full")
 
   WinWait Jak - Anki
@@ -190,7 +190,7 @@ LayoutRead() {
   Sleep 250
   Run "autohotkey.exe" "C:\~\dev\superhi\LaunchToggle.ahk" "\(Zaia\) ahk_exe neovide.exe" "C:\~\dev\superhi\nvim\zaia.ahk",, Hide
   Sleep 250
-  Run "C:\scoop\apps\sioyek\current\sioyek.exe" "C:\~\arc\cdx\books\_wip\practical-vim.pdf"
+  Run "C:\scoop\apps\sioyek\current\sioyek.exe" "C:\~\arc\cdx\_now\practical-vim-2e_neil.pdf"
 
   WinWait practical-vim.pdf
   WinActivate practical-vim.pdf
