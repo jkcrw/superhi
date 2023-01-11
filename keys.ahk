@@ -226,6 +226,7 @@ GetExplorerPath(hwnd=0){
 #IfWinActive ahk_exe neovide.exe
   ; App Control
   ; ^+n::Run neovide.exe
+  ^!+#b::Send ^!{F7}
 
   ; Left Sidebar
   ^!+#f::Send ^!+#{F12}
