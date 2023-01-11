@@ -15,7 +15,7 @@ global CURSOR := 1
 SetTimer, CheckIdle, 100
 
 CheckIdle() {
-  if (A_TimeIdleMouse > 45000) {
+  if (A_TimeIdleMouse > 90000) {
     if CURSOR
       SystemCursor(CURSOR := !CURSOR)
   } else if !CURSOR
