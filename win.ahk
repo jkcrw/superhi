@@ -119,27 +119,27 @@ LayoutKanken() {
 
 LayoutTech() {
   Run "autohotkey.exe" "LaunchToggle.ahk" "Jak - Anki ahk_exe anki.exe" "anki.cmd",, Hide
-  Run "autohotkey.exe" "LaunchToggle.ahk" "\(Pazuru\) ahk_exe neovide.exe" "C:\~\dev\superhi\nvim\pazuru.ahk",, Hide
-  Run wtp -w -1 -d "C:\~\dev\pazuru\tools",, Hide
+  Run "autohotkey.exe" "LaunchToggle.ahk" "\(Enigmata\) ahk_exe neovide.exe" "C:\~\dev\superhi\nvim\enigmata.ahk",, Hide
+  Run wtp -w -1 -d "C:\~\dev\enigmata\tools",, Hide
   Run "https://leetcode.com/jxcrw/"
   Run "https://leetcode.com/problemset/all/"
   ; Run "https://www.techinterviewhandbook.org/best-practice-questions"
   ; Run "https://gist.github.com/tykurtz/3548a31f673588c05c89f9ca42067bc4"
   Run "https://www.youtube.com/playlist?list=PLyc1h6zbeN84XQIAxtAVYGKba72o_Y-YQ"
   Run "https://www.youtube.com/playlist?list=PLeymWH78anxrAsh5NNYuYyB6VxNyOy49l"
-  Run "C:\\~\\dev\\sphk\\Utilities\\steno-jig\\form.html"
   Run "https://monkeytype.com"
+  Run "C:\\~\\dev\\sphk\\Utilities\\steno-jig\\form.html"
 
   WinWait ahk_exe vivaldi.exe
   WinActivate ahk_exe vivaldi.exe
   Snap("main_center", "left", "full")
 
-  WinWait \(Pazuru\) Neovide
-  WinActivate \(Pazuru\) Neovide
+  WinWait \(Enigmata\) Neovide
+  WinActivate \(Enigmata\) Neovide
   Snap("main_center", "right", "full")
 
-  WinWait ~/../pazuru/tools ahk_exe WindowsTerminal.exe
-  WinActivate ~/../pazuru/tools ahk_exe WindowsTerminal.exe
+  WinWait ~/dev/enigmata/tools ahk_exe WindowsTerminal.exe
+  WinActivate ~/dev/enigmata/tools ahk_exe WindowsTerminal.exe
   Snap("top_center", "right", "bottom")
 
   WinWait Jak - Anki
@@ -186,23 +186,44 @@ LayoutClasses() {
 }
 
 LayoutRead() {
+  Run "autohotkey.exe" "LaunchToggle.ahk" "Jak - Anki ahk_exe anki.exe" "anki.cmd",, Hide
   Run "autohotkey.exe" "C:\~\dev\superhi\LaunchToggle.ahk" "\(Neovim\) ahk_exe neovide.exe" "C:\~\dev\superhi\nvim\nvim.ahk",, Hide
   Sleep 250
-  Run "autohotkey.exe" "C:\~\dev\superhi\LaunchToggle.ahk" "\(Zaia\) ahk_exe neovide.exe" "C:\~\dev\superhi\nvim\zaia.ahk",, Hide
+  Run "autohotkey.exe" "C:\~\dev\superhi\LaunchToggle.ahk" "\(Zia\) ahk_exe neovide.exe" "C:\~\dev\superhi\nvim\zia.ahk",, Hide
   Sleep 250
-  Run "C:\scoop\apps\sioyek\current\sioyek.exe" "C:\~\arc\cdx\_now\practical-vim-2e_neil.pdf"
+  Run "autohotkey.exe" "C:\~\dev\superhi\LaunchToggle.ahk" "\(Navi\) ahk_exe neovide.exe" "C:\~\dev\superhi\nvim\navi.ahk",, Hide
+  Sleep 250
+  Run "C:\scoop\apps\sioyek\current\sioyek.exe" --new-window "C:\~\arc\cdx\_now\practical-vim-2e_neil.pdf"
+  Run "C:\scoop\apps\sioyek\current\sioyek.exe" --new-window "C:\~\arc\cdx\_now\pefi-4e_scherz-monk.pdf"
+  Run "C:\scoop\apps\sioyek\current\sioyek.exe" --new-window "C:\~\arc\cdx\_now\intro-to-algos-4e_clrs.pdf"
 
-  WinWait practical-vim.pdf
-  WinActivate practical-vim.pdf
-  Snap("main_cener", "left", "full")
+  WinWait practical-vim-2e_neil.pdf
+  WinActivate practical-vim-2e_neil.pdf
+  Snap("main_center", "left", "full")
+
+  WinWait pefi-4e_scherz-monk.pdf
+  WinActivate pefi-4e_scherz-monk.pdf
+  Snap("main_center", "left", "full")
+
+  WinWait intro-to-algos-4e_clrs.pdf
+  WinActivate intro-to-algos-4e_clrs.pdf
+  Snap("main_center", "left", "full")
 
   WinWait \(Neovim\) Neovide
   WinActivate \(Neovim\) Neovide
   Snap("main_center", "right", "full")
 
-  WinWait \(Zaia\) Neovide
-  WinActivate \(Zaia\) Neovide
+  WinWait \(Navi\) Neovide
+  WinActivate \(Navi\) Neovide
+  Snap("main_center", "right", "full")
+
+  WinWait \(Zia\) Neovide
+  WinActivate \(Zia\) Neovide
   Snap("main_right", "left", "full")
+
+  WinWait Jak - Anki
+  WinActivate Jak - Anki
+  Snap("main_right", "right", "full")
 
   Return
 }
