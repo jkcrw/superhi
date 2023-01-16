@@ -5,13 +5,14 @@ EnvSet, PYTHONUSERBASE, %pythonbase%
 SetWorkingDir, C:\~\arc\crow
 
 files = % ""
-. " q.md"
-. " _jnl\life.md"
+. " Q.md"
 . " _jnl\lw.md"
-. " software\swj.md"
-. " software\osu.md"
-. " software\tools.md"
-. " software\org.md"
+. " _jnl\jnl.md"
+. " work\wj.md"
+. " self\sj.md"
+. " work\osu.md"
+. " work\org.md"
+. " work\tools.md"
 
 Run neovide.exe %files%  --multigrid
 WinWait Neovide
