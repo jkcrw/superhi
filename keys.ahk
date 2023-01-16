@@ -351,9 +351,9 @@ GetExplorerPath(hwnd=0){
 
   ; Confirm
   ^Enter::
-    Sleep 10
+    Sleep 20
     Send ^s
-    Sleep 10
+    Sleep 20
     Send ^{F4}
     Return
 
