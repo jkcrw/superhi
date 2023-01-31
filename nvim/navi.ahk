@@ -6,9 +6,9 @@ SetWorkingDir, C:\~\arc\navi
 
 files = % ""
 . " README.md"
-. " _dsa\intro-to-algos\README.md"
-. " _elec\pefi\README.md"
 . " vim\practical-vim.md"
+. " elec\pefi\README.md"
+. " dsa\intro-to-algos\README.md"
 
 Run neovide.exe %files% --multigrid
 WinWait Neovide

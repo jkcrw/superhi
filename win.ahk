@@ -124,7 +124,7 @@ LayoutTech() {
   Run "https://leetcode.com/jxcrw/"
   Run "https://leetcode.com/problemset/all/"
   ; Run "https://www.techinterviewhandbook.org/best-practice-questions"
-  ; Run "https://gist.github.com/tykurtz/3548a31f673588c05c89f9ca42067bc4"
+  Run "https://gist.github.com/tykurtz/3548a31f673588c05c89f9ca42067bc4"
   Run "https://www.youtube.com/playlist?list=PLyc1h6zbeN84XQIAxtAVYGKba72o_Y-YQ"
   Run "https://www.youtube.com/playlist?list=PLeymWH78anxrAsh5NNYuYyB6VxNyOy49l"
   Run "https://monkeytype.com"
