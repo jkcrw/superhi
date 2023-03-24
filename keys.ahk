@@ -29,6 +29,7 @@ F13::Run "launchtoggle_plover.ahk"
 ^!+#Launch_App2::Run "https://calendar.google.com"
 ^!+#p::Return ; Placeholder so PowerPoint doesn't launch
 ^!+#y::Return ; Placeholder so Yammer doesn't launch
+^!+#n::Return ; Placeholder so OneNote doesn't launch
 
 Launch_App2::LaunchToggleApp("電卓 ahk_class ApplicationFrameWindow ahk_exe ApplicationFrameHost.exe", "calc.exe")
 #IfWinActive 電卓 ahk_exe ApplicationFrameHost.exe
