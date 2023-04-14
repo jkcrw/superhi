@@ -151,37 +151,25 @@ LayoutTech() {
 LayoutClasses() {
   Run "autohotkey.exe" "LaunchToggle.ahk" "Jak - Anki ahk_exe anki.exe" "anki.cmd",, Hide
   Run "autohotkey.exe" "LaunchToggle.ahk" "\(OSU\) ahk_exe neovide.exe" "C:\~\dev\superhi\nvim\osu.ahk",, Hide
-  Run "https://blackboard.und.edu/ultra/courses/_124545_1/cl/outline"
-  Run, explore "C:\~\work\_training\osu\cs208"
-  Run "C:\scoop\apps\sioyek\current\sioyek.exe" --new-window "C:\~\arc\cdx\_now\discrete-math-3e_und.pdf"
-  Run "C:\scoop\apps\sioyek\current\sioyek.exe" --new-window "C:\~\arc\cdx\_now\discrete-math-3e-solutions_und.pdf"
+  Run "https://canvas.oregonstate.edu/courses/1915167"
+  Run, explore "C:\~\work\_training\osu\cs261"
 
   WinWait ahk_exe vivaldi.exe
   WinActivate ahk_exe vivaldi.exe
-  Snap("main_left", "right", "full")
-
-  WinWait discrete-math3_und.pdf
-  WinActivate discrete-math3_und.pdf
   Snap("main_center", "left", "full")
 
   WinWait \(OSU\) Neovide
   WinActivate \(OSU\) Neovide
   Snap("main_center", "right", "full")
 
-  WinWait cs208
-  WinActivate cs208
+  WinWait cs261
+  WinActivate cs261
   Snap("top_center", "right", "bottom")
-
-  WinWait discrete-math3_und-x.pdf
-  WinActivate discrete-math3_und-x.pdf
-  Snap("main_right", "left", "full")
 
   WinWait Jak - Anki
   WinActivate Jak - Anki
   Snap("main_right", "right", "full")
 
-  Sleep 15000
-  Run "https://blackboard.und.edu/ultra/courses/_124545_1/cl/outline"
   Return
 }
 

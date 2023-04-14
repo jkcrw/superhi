@@ -2,12 +2,10 @@
 pythonbase := ""
 EnvSet, PYTHONUSERBASE, %pythonbase%
 
-SetWorkingDir, C:\~\work\_training\osu\cs208
+SetWorkingDir, C:\~\work\_training\osu\cs261
 
 files = % ""
 . " README.md"
-. " exercises.md"
-. " assignments\solution_template.md"
 
 Run neovide.exe %files% --multigrid
 WinWait Neovide
