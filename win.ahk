@@ -150,7 +150,7 @@ LayoutTech() {
 
 LayoutClasses() {
   Run "autohotkey.exe" "LaunchToggle.ahk" "Jak - Anki ahk_exe anki.exe" "anki.cmd",, Hide
-  Run "autohotkey.exe" "LaunchToggle.ahk" "\(OSU\) ahk_exe neovide.exe" "C:\~\dev\superhi\nvim\osu.ahk",, Hide
+  Run "autohotkey.exe" "LaunchToggle.ahk" "\(OSU\) ahk_exe sublime_text.exe" "C:\~\dev\_lgx\workspace\osu.sublime-workspace",, Hide
   Run "https://canvas.oregonstate.edu/courses/1915167"
   Run, explore "C:\~\work\_training\osu\cs261"
 
@@ -158,8 +158,8 @@ LayoutClasses() {
   WinActivate ahk_exe vivaldi.exe
   Snap("main_center", "left", "full")
 
-  WinWait \(OSU\) Neovide
-  WinActivate \(OSU\) Neovide
+  WinWait \(osu\) - Sublime Text
+  WinActivate \(osu\) - Sublime Text
   Snap("main_center", "right", "full")
 
   WinWait cs261
@@ -309,7 +309,7 @@ Snap(monitor, regionH, regionV) {
 
   ; Per-client adjustments
   WinGetTitle, winTitle, A
-  noAdjustmentClients := ["Sublime Text", "VS Code", "diagrams.net"]
+  noAdjustmentClients := ["Sublime Text", "VS Code", "diagrams.net", "Vivaldi"]
   if Contains(winTitle, noAdjustmentClients) {
     ; Do nothing because no adjustments required
   } else {

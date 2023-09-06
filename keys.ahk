@@ -361,6 +361,7 @@ GetExplorerPath(hwnd=0){
 
   ; Focus current file in left sidebar tree
   ^!+f::Send !{F5}
+  ^!+#F14::Send !{F5}
   ; MButton::
   ;   Click
   ;   Send {Escape}{Escape}{Escape}gd
@@ -436,6 +437,11 @@ GetExplorerPath(hwnd=0){
 ; Excel
 #IfWinActive ahk_class XLMAIN
   ^!+#1::Send != ; Autosum cells
+  ^F12::Return
+#IfWinActive
+
+; Excel
+#IfWinActive ahk_class PPTFrameClass
   ^F12::Return
 #IfWinActive
 
@@ -682,18 +688,52 @@ Return
   Run https://www.mdbg.net/chinese/dictionary?page=worddict&wdrst=1&wdqb=%Clipboard%
   Return
 
-; ^!+#b:: ; Target tag
-;   Sleep 100
-;   Clipboard :=
-;   Send ^c
-;   ClipWait, 1
-;   replaced := "<span class=""target"">" . Clipboard . "</span>"
-;   Clipboard := replaced
-;   Send ^v
-;   Return
+^!+#b:: ; Target tag
+  Sleep 100
+  Clipboard :=
+  Send ^c
+  ClipWait, 1
+  replaced := "<span class=""target"">" . Clipboard . "</span>"
+  Clipboard := replaced
+  Send ^v
+  Return
 
 #k::Run, bthprops.cpl
 
 ^!+#k::
   #Include connect_bt.ahk
+  Return
+
+
+; ┌─────────────────────────────────────────────────────────────────────────────
+; │ Lifehud
+; └─────────────────────────────────────────────────────────────────────────────
+^!#s:: ; Sleep
+  Clipboard :=
+  Run, "C:\~\dev\lifehud\tracker\mind.py", "C:\~\dev\lifehud", Hide
+  ClipWait, 0.5
+  result := Clipboard
+  result := StrSplit(result, "_")
+  message := result[1]
+  code := result[2]
+
+  SplashImage,, B1 FS12 CW1a1b26 CT%code%, %message%,,, Consolas
+  Sleep, 3000
+  SplashImage
+  SplashImage, Off
+  Return
+
+^!#p:: ; Pool
+  Clipboard :=
+  Run, "C:\~\dev\lifehud\tracker\pool.py", "C:\~\dev\lifehud", Hide
+  ClipWait, 0.5
+  result := Clipboard
+  result := StrSplit(result, "_")
+  message := result[1]
+  code := result[2]
+
+  SplashImage,, B1 FS12 CW1a1b26 CT%code%, %message%,,, Consolas
+  Sleep, 3000
+  SplashImage
+  SplashImage, Off
   Return
