@@ -756,6 +756,7 @@ Return
 ^!#b:: ; Body
   Clipboard :=
   Run, "C:\~\dev\lifehud\tracker\body.py", "C:\~\dev\lifehud", Hide
+  Run "subl.exe" "C:\Users\jak\Dropbox\lifehud\body.txt:1:29",, Hide
   ClipWait, 0.5
   result := Clipboard
   result := StrSplit(result, "_")
