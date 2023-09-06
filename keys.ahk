@@ -708,7 +708,7 @@ Return
 ; ┌─────────────────────────────────────────────────────────────────────────────
 ; │ Lifehud
 ; └─────────────────────────────────────────────────────────────────────────────
-^!#s:: ; Sleep
+^!#s:: ; Mind
   Clipboard :=
   Run, "C:\~\dev\lifehud\tracker\mind.py", "C:\~\dev\lifehud", Hide
   ClipWait, 0.5
@@ -726,6 +726,36 @@ Return
 ^!#p:: ; Pool
   Clipboard :=
   Run, "C:\~\dev\lifehud\tracker\pool.py", "C:\~\dev\lifehud", Hide
+  ClipWait, 0.5
+  result := Clipboard
+  result := StrSplit(result, "_")
+  message := result[1]
+  code := result[2]
+
+  SplashImage,, B1 FS12 CW1a1b26 CT%code%, %message%,,, Consolas
+  Sleep, 3000
+  SplashImage
+  SplashImage, Off
+  Return
+
+^!#c:: ; Work
+  Clipboard :=
+  Run, "C:\~\dev\lifehud\tracker\work.py", "C:\~\dev\lifehud", Hide
+  ClipWait, 0.5
+  result := Clipboard
+  result := StrSplit(result, "_")
+  message := result[1]
+  code := result[2]
+
+  SplashImage,, B1 FS12 CW1a1b26 CT%code%, %message%,,, Consolas
+  Sleep, 3000
+  SplashImage
+  SplashImage, Off
+  Return
+
+^!#b:: ; Body
+  Clipboard :=
+  Run, "C:\~\dev\lifehud\tracker\body.py", "C:\~\dev\lifehud", Hide
   ClipWait, 0.5
   result := Clipboard
   result := StrSplit(result, "_")
