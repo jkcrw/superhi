@@ -712,7 +712,7 @@ Return
 ; ┌─────────────────────────────────────────────────────────────────────────────
 ; │ Lifehud
 ; └─────────────────────────────────────────────────────────────────────────────
-^!#s:: ; Mind
+^!#m:: ; Mind
   Clipboard :=
   Run, "C:\~\dev\lifehud\tracker\mind.py", "C:\~\dev\lifehud", Hide
   ClipWait, 0.5
@@ -760,7 +760,27 @@ Return
 ^!#b:: ; Body
   Clipboard :=
   Run, "C:\~\dev\lifehud\tracker\body.py", "C:\~\dev\lifehud", Hide
-  Run "subl.exe" "C:\Users\jak\Dropbox\lifehud\body.txt:1:29",, Hide
+  DROPBOX := "C:\Users\" . A_UserName . "\Dropbox\lifehud\"
+  file := DROPBOX . "body.txt:1:29"
+  Run "subl.exe" %file%,, Hide
+  ClipWait, 0.5
+  result := Clipboard
+  result := StrSplit(result, "_")
+  message := result[1]
+  code := result[2]
+
+  SplashImage,, B1 FS12 CW1a1b26 CT%code%, %message%,,, Consolas
+  Sleep, 3000
+  SplashImage
+  SplashImage, Off
+  Return
+
+^!#s:: ; Social
+  Clipboard :=
+  Run, "C:\~\dev\lifehud\tracker\social.py", "C:\~\dev\lifehud", Hide
+  DROPBOX := "C:\Users\" . A_UserName . "\Dropbox\lifehud\"
+  file := DROPBOX . "social.txt:1:29"
+  Run "subl.exe" %file%,, Hide
   ClipWait, 0.5
   result := Clipboard
   result := StrSplit(result, "_")
