@@ -639,7 +639,9 @@ FastTime(format) {
   Clipboard :=
   Send ^c
   ClipWait, 0.1
-  FileAppend, %Clipboard%`n, C:\Users\jak\Dropbox\subs.txt
+  DROPBOX := "C:\Users\" . A_UserName . "\Dropbox\"
+  file := DROPBOX . "subs.txt"
+  FileAppend, %Clipboard%`n, %file%
   SplashImage,, B1 FS12 CW272822 CTa6e22e, Copied :),,, Consolas
   Sleep, 1000
   SplashImage, Off
@@ -650,7 +652,9 @@ FastTime(format) {
   Clipboard :=
   Send c
   ClipWait, 0.1
-  FileAppend, %Clipboard%`n, C:\Users\jak\Dropbox\subs.txt
+  DROPBOX := "C:\Users\" . A_UserName . "\Dropbox\"
+  file := DROPBOX . "subs.txt"
+  FileAppend, %Clipboard%`n, %file%
   SplashImage,, B1 FS12 CW272822 CTa6e22e, Copied :),,, Consolas
   Sleep, 1000
   SplashImage, Off
