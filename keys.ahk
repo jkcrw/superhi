@@ -713,7 +713,7 @@ Return
 ; │ Lifehud
 ; └─────────────────────────────────────────────────────────────────────────────
 ^!#m::Run, python.exe "C:\~\dev\lifehud\lifehud.py" "track" "mind", C:\~\dev\lifehud, Hide
+^!#b::Run, python.exe "C:\~\dev\lifehud\lifehud.py" "track" "body", C:\~\dev\lifehud, Hide
 ^!#p::Run, python.exe "C:\~\dev\lifehud\lifehud.py" "track" "pool", C:\~\dev\lifehud, Hide
 ^!#c::Run, python.exe "C:\~\dev\lifehud\lifehud.py" "track" "work", C:\~\dev\lifehud, Hide
-^!#b::Run, python.exe "C:\~\dev\lifehud\lifehud.py" "track" "body", C:\~\dev\lifehud, Hide
-^!#s::Run, python.exe "C:\~\dev\lifehud\lifehud.py" "track" "social", C:\~\dev\lifehud, Hide
+^!#s::Run, python.exe "C:\~\dev\lifehud\lifehud.py" "track" "meet", C:\~\dev\lifehud, Hide
